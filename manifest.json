@@ -1,0 +1,25 @@
+{
+  "name": "Helper AI - Powered by ChatGPT",
+  "description": "Use the power of ChatGPT to serve users with the best answers to their questions.",
+  "author": "Mukesh MAurya",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["*://*/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "runAt": "document_end",
+      "js": ["script.js"],
+      "all_frames": true
+    }
+  ]
+}
